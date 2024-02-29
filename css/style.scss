@@ -2,8 +2,19 @@ body {
     margin: 0;
 }
 
+$whitecolor: white;
+$greenlightcolor: #99E2D0;
+$greendarkcolor: #008766;
+$bluelightcolor: #89C8FA;
+$bluedarkcolor: #003A68;
+$pinkcolor: #FF79DA;
+$purplecolor: #9356DC;
 $graycolor: #EAEAEA;
 $blackcolor: black;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 .header {
     width: 100%;
@@ -12,7 +23,7 @@ $blackcolor: black;
     flex-direction: column;
 
     &__titleBar {
-        position: relative;
+        z-index: 99;
         width: 100%;
         height: 63px;
         display: flex;
@@ -39,6 +50,7 @@ $blackcolor: black;
     }
 
     &__searchBar {
+        z-index: 98;
         width: 100%;
         height: 50px;
         background-color: $graycolor;
@@ -60,7 +72,119 @@ $blackcolor: black;
             font-weight: 500;
         }
     }
+}
 
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__infoBar {
+        width: 100%;
+        height: 300px;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .infoBar__title {
+            margin: 0;
+            margin-top: 15px;
+            width: calc(100% - 45px);
+            height: 68px;
+            font-size: 24px;
+        }
+
+        .infoBar__text {
+            margin: 0;
+            width: calc(100% - 5px);
+            height: 46px;
+            font-size: 18px;
+        }
+
+        .infoBar__link {
+            margin: 0;
+            margin: 30px;
+            width: 218px;
+            height: 50px;
+            background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px 0px #00000040;
+            text-decoration: none;
+            border-radius: 25px;
+            color: $whitecolor;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s all ease-out;
+        }
+
+        .infoBar__link:hover {
+            transition: 0.3s all ease-out;
+            box-shadow: 0px 4px 15px 0px #00000059;
+            background: linear-gradient(360deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+            opacity: 0.83;
+            border-radius: 25px;
+        }
+    }
     
+    &__optionBar {
+        height: 400px;
 
+        .optionBar__title {
+            margin-top: 40px;
+            margin-left: 15px;
+        }
+
+        .optionBar__buttonBar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+
+            .buttonBar__button {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                background-color: white;
+                box-shadow: 0px 4px 15px 0px #00000026;
+                width: 100%;
+                max-width: 322.49px;
+                height: 72.38px;
+                border-radius: 20px;
+
+                .button__number {
+                    color: $whitecolor;
+                    margin-left: -13px;
+                    width: 24px;
+                    height: 24px;
+                    background-color: $purplecolor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                }
+
+                .button__icon {
+                    color: #a8a8a8;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .icon__3 {
+                    color: $purplecolor;
+                }
+
+                .button__text {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }
