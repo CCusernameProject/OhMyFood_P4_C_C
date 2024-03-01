@@ -133,7 +133,7 @@ body {
     }
     
     &__optionBar {
-        height: 400px;
+        height: 420px;
 
         .optionBar__title {
             margin-top: 40px;
@@ -183,6 +183,111 @@ body {
                 .button__text {
                     font-size: 16px;
                     font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__cardRestaurant {
+        height: 1200px;
+        background-color: #f5f5f5;
+
+        .cardRestaurant__title {
+            margin-top: 40px;
+            margin-left: 15px;
+        }
+
+        .cardRestaurant__card {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .card__link {
+                text-decoration: none;
+    
+                .link__article {
+                    width: 340px;
+                    height: 251px;
+                    background-color: $whitecolor;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-radius: 15px;
+
+                    .article__contentImg {
+
+                        .contentImg__img {
+                            width: 340px;
+                            height: 231px;
+                            margin-top: -60px;
+                            border-radius: 15px 15px 0px 0px;
+                        }
+    
+                        .contentImg__news {
+                            
+                            .news__text {
+                                position: absolute;
+                                margin: 0;
+                                margin-top: -160px;
+                                right: 30px;
+                                color: $greendarkcolor;
+                                width: 80px;
+                                height: 29px;
+                                border-radius: 2px;
+                                background-color: $greenlightcolor;
+                                box-shadow: 0px 2px 4px 0px #00000026;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 16.41px;
+                            }
+                        }
+                    }
+    
+
+                    .article__description {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        color: black;
+
+                        .description__text {
+                            width: 247px;
+                            margin: 0;
+
+                            .text__title {
+                                margin: 0;
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 21.09px;
+                            }
+
+                            .text__subtitle {
+                                margin: 0;
+                                font-size: 17px;
+                                font-weight: 300;
+                                line-height: 19.92px;
+                            }
+                        }
+
+                        .description__icon {
+                            width: 22px;
+                            height: 21px;
+                            font-size: 27.5px;
+                            margin-right: 15px;
+                            // color: #00000000;
+                        }
+
+                        .fa-border {
+                            border: 1px black solid;
+                        }
+                    }
                 }
             }
         }
