@@ -14,7 +14,7 @@ $darkgray: rgb(59, 59, 59);
     background-color: $darkgray;
 
     &__img {
-        margin-top: 15px;
+        margin-top: 30px;
         width: 137.58px;
         height: 18px;
     }
@@ -28,10 +28,13 @@ $darkgray: rgb(59, 59, 59);
         margin-left: 15px;
         
         .article__link {
+            margin: 0;
             margin-top: 6.5px;
             text-decoration: none;
             color: white;
             display: flex;
+            font-size: 16px;
+            line-height: 18.75px;
             gap: 15px;
 
             .link__icon {
