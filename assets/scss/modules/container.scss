@@ -1,0 +1,229 @@
+$whitecolor: white;
+$greenlightcolor: #99E2D0;
+$greendarkcolor: #008766;
+$bluelightcolor: #89C8FA;
+$bluedarkcolor: #003A68;
+$pinkcolor: #FF79DA;
+$purplecolor: #9356DC;
+$graycolor: #EAEAEA;
+$blackcolor: black;
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__infoBar {
+        width: 100%;
+        height: 300px;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .infoBar__title {
+            margin: 0;
+            margin-top: 15px;
+            width: calc(100% - 45px);
+            height: 68px;
+            font-size: 24px;
+        }
+
+        .infoBar__text {
+            margin: 0;
+            width: calc(100% - 5px);
+            height: 46px;
+            font-size: 18px;
+        }
+
+        .infoBar__link {
+            margin: 0;
+            margin: 30px;
+            width: 218px;
+            height: 50px;
+            background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px 0px #00000040;
+            text-decoration: none;
+            border-radius: 25px;
+            color: $whitecolor;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s all ease-out;
+        }
+
+        .infoBar__link:hover {
+            transition: 0.3s all ease-out;
+            box-shadow: 0px 4px 15px 0px #00000059;
+            background: linear-gradient(360deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+            opacity: 0.83;
+            border-radius: 25px;
+        }
+    }
+    
+    &__optionBar {
+        height: 420px;
+
+        .optionBar__title {
+            margin-top: 40px;
+            margin-left: 15px;
+        }
+
+        .optionBar__buttonBar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+
+            .buttonBar__button {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                background-color: white;
+                box-shadow: 0px 4px 15px 0px #00000026;
+                width: 100%;
+                max-width: 322.49px;
+                height: 72.38px;
+                border-radius: 20px;
+
+                .button__number {
+                    color: $whitecolor;
+                    margin-left: -13px;
+                    width: 24px;
+                    height: 24px;
+                    background-color: $purplecolor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                }
+
+                .button__icon {
+                    color: #a8a8a8;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .icon__3 {
+                    color: $purplecolor;
+                }
+
+                .button__text {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__cardRestaurant {
+        height: 1200px;
+        background-color: #f5f5f5;
+
+        .cardRestaurant__title {
+            margin-top: 40px;
+            margin-left: 15px;
+        }
+
+        .cardRestaurant__card {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .card__link {
+                text-decoration: none;
+    
+                .link__article {
+                    width: 340px;
+                    height: 251px;
+                    background-color: $whitecolor;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-radius: 15px;
+
+                    .article__contentImg {
+
+                        .contentImg__img {
+                            width: 340px;
+                            height: 231px;
+                            margin-top: -60px;
+                            border-radius: 15px 15px 0px 0px;
+                        }
+    
+                        .contentImg__news {
+                            
+                            .news__text {
+                                position: absolute;
+                                margin: 0;
+                                margin-top: -160px;
+                                right: 30px;
+                                color: $greendarkcolor;
+                                width: 80px;
+                                height: 29px;
+                                border-radius: 2px;
+                                background-color: $greenlightcolor;
+                                box-shadow: 0px 2px 4px 0px #00000026;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 16.41px;
+                            }
+                        }
+                    }
+    
+
+                    .article__description {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100%;
+                        color: black;
+
+                        .description__text {
+                            width: 247px;
+                            margin: 0;
+
+                            .text__title {
+                                margin: 0;
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 21.09px;
+                            }
+
+                            .text__subtitle {
+                                margin: 0;
+                                font-size: 17px;
+                                font-weight: 300;
+                                line-height: 19.92px;
+                            }
+                        }
+
+                        .description__icon {
+                            width: 22px;
+                            height: 21px;
+                            font-size: 27.5px;
+                            margin-right: 15px;
+                            // color: #00000000;
+                        }
+
+                        .fa-border {
+                            border: 1px black solid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

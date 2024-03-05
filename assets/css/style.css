@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+}
+.header__titleBar {
+  z-index: 99;
+  width: 100%;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.header__titleBar .titleBar__icon {
+  font-size: 17.2px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.header__titleBar .titleBar__img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 197px;
+  height: 36px;
+}
+.header__searchBar {
+  z-index: 98;
+  width: 100%;
+  height: 50px;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.header__searchBar .seacherBar__input {
+  width: 109px;
+  background-color: #EAEAEA;
+  border: none;
+}
+.header__searchBar ::-moz-placeholder {
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+}
+.header__searchBar ::placeholder {
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main__infoBar {
+  width: 100%;
+  height: 300px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main__infoBar .infoBar__title {
+  margin: 0;
+  margin-top: 15px;
+  width: calc(100% - 45px);
+  height: 68px;
+  font-size: 24px;
+}
+.main__infoBar .infoBar__text {
+  margin: 0;
+  width: calc(100% - 5px);
+  height: 46px;
+  font-size: 18px;
+}
+.main__infoBar .infoBar__link {
+  margin: 0;
+  margin: 30px;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  text-decoration: none;
+  border-radius: 25px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease-out;
+}
+.main__infoBar .infoBar__link:hover {
+  transition: 0.3s all ease-out;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  background: linear-gradient(360deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  opacity: 0.83;
+  border-radius: 25px;
+}
+.main__optionBar {
+  height: 420px;
+}
+.main__optionBar .optionBar__title {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+.main__optionBar .optionBar__buttonBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.main__optionBar .optionBar__buttonBar .buttonBar__button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  width: 100%;
+  max-width: 322.49px;
+  height: 72.38px;
+  border-radius: 20px;
+}
+.main__optionBar .optionBar__buttonBar .buttonBar__button .button__number {
+  color: white;
+  margin-left: -13px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+.main__optionBar .optionBar__buttonBar .buttonBar__button .button__icon {
+  color: #a8a8a8;
+  width: 20px;
+  height: 20px;
+}
+.main__optionBar .optionBar__buttonBar .buttonBar__button .icon__3 {
+  color: #9356DC;
+}
+.main__optionBar .optionBar__buttonBar .buttonBar__button .button__text {
+  font-size: 16px;
+  font-weight: 500;
+}
+.main__cardRestaurant {
+  height: 1200px;
+  background-color: #f5f5f5;
+}
+.main__cardRestaurant .cardRestaurant__title {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+.main__cardRestaurant .cardRestaurant__card {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link {
+  text-decoration: none;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article {
+  width: 340px;
+  height: 251px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img {
+  width: 340px;
+  height: 231px;
+  margin-top: -60px;
+  border-radius: 15px 15px 0px 0px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__news .news__text {
+  position: absolute;
+  margin: 0;
+  margin-top: -160px;
+  right: 30px;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  color: black;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text {
+  width: 247px;
+  margin: 0;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text .text__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text .text__subtitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19.92px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon {
+  width: 22px;
+  height: 21px;
+  font-size: 27.5px;
+  margin-right: 15px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .fa-border {
+  border: 1px black solid;
+}/*# sourceMappingURL=style.css.map */
