@@ -7,3 +7,41 @@ $pinkcolor: #FF79DA;
 $purplecolor: #9356DC;
 $graycolor: #EAEAEA;
 $blackcolor: black;
+$darkgray: rgb(59, 59, 59);
+
+* {
+    margin: 0;
+}
+
+.footer {
+    height: 170px;
+    background-color: $darkgray;
+
+    &__img {
+        margin-top: 15px;
+        width: 137.58px;
+        height: 18px;
+    }
+
+    &__img > path {
+        fill: white;
+    }
+
+    &__article {
+        margin-top: 15px;
+        margin-left: 15px;
+        
+        .article__link {
+            margin-top: 6.5px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            gap: 15px;
+
+            .link__icon {
+                width: 11px;
+                height: 13px;
+            }
+        }
+    }
+}
