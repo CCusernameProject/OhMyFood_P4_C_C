@@ -280,8 +280,9 @@ body {
 }
 
 .footer {
-  height: 170px;
+  height: 185px;
   background-color: rgb(59, 59, 59);
+  box-sizing: border-box;
 }
 .footer__img {
   margin-top: 30px;
@@ -308,4 +309,9 @@ body {
 .footer__article .article__link .link__icon {
   width: 11px;
   height: 13px;
+}
+.footer__article .article__link .link__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 18.75px;
 }/*# sourceMappingURL=style.css.map */

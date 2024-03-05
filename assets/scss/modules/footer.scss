@@ -10,8 +10,9 @@ $blackcolor: black;
 $darkgray: rgb(59, 59, 59);
 
 .footer {
-    height: 170px;
+    height: 185px;
     background-color: $darkgray;
+    box-sizing: border-box;
 
     &__img {
         margin-top: 30px;
@@ -40,6 +41,12 @@ $darkgray: rgb(59, 59, 59);
             .link__icon {
                 width: 11px;
                 height: 13px;
+            }
+
+            .link__text {
+                margin: 0;
+                font-size: 16px;
+                line-height: 18.75px;
             }
         }
     }
