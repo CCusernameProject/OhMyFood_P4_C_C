@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <title>Ohmyfood</title>
@@ -53,11 +53,11 @@
         </div>
         <div class="main__cardRestaurant">
             <h2 class="cardRestaurant__title">Restaurants</h2>
-            <div class="cardRestaurant__card">
-                <a href="#" class="card__link">
+            <div class="cardRestaurant__card" id="card">
+                <a href="#card1" class="card__link">
                     <article class="link__article">
                         <div class="article__contentImg">
-                            <img class="contentImg__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                            <img class="contentImg__img contentImg__img--allImg" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                             <div class="contentImg__news">
                                 <p class="news__text">Nouveau</p>
                             </div>
@@ -67,7 +67,94 @@
                                 <h2 class="text__title">La palette du goût</h2>
                                 <p class="text__subtitle">Ménilmontant</p>
                             </div>
-                            <i class="description__icon fa-solid fa-heart fa-border"></i>
+                            <div class="description__icon">
+                                <input type="checkbox" class="icon__checkbox">
+                                <svg class="icon__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="svg__stroke" fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <linearGradient id="svg__Gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                        <stop offset="0" stop-color="#FF79DA"/>
+                                        <stop offset="100" stop-color="#9356DC"/>
+                                    </linearGradient>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="#card1" class="card__link">
+                    <article class="link__article">
+                        <div class="article__contentImg">
+                            <img class="contentImg__img contentImg__img--exeptedImg" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                            <div class="contentImg__news">
+                                <p class="news__text">Nouveau</p>
+                            </div>
+                        </div>
+                        <div class="article__description">
+                            <div class="description__text">
+                                <h2 class="text__title">La note enchantée</h2>
+                                <p class="text__subtitle">Charonne</p>
+                            </div>
+                            <div class="description__icon">
+                                <input type="checkbox" class="icon__checkbox">
+                                <svg class="icon__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="svg__stroke" fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <linearGradient id="svg__Gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                        <stop offset="0" stop-color="#FF79DA"/>
+                                        <stop offset="100" stop-color="#9356DC"/>
+                                    </linearGradient>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="#card1" class="card__link">
+                    <article class="link__article">
+                        <div class="article__contentImg">
+                            <img class="contentImg__img contentImg__img--allImg" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            <div class="contentImg__news">
+                                <p class="news__text">Nouveau</p>
+                            </div>
+                        </div>
+                        <div class="article__description">
+                            <div class="description__text">
+                                <h2 class="text__title">À la française</h2>
+                                <p class="text__subtitle">Cité Rouge</p>
+                            </div>
+                            <div class="description__icon">
+                                <input type="checkbox" class="icon__checkbox">
+                                <svg class="icon__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="svg__stroke" fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <linearGradient id="svg__Gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                        <stop offset="0" stop-color="#FF79DA"/>
+                                        <stop offset="100" stop-color="#9356DC"/>
+                                    </linearGradient>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="#card1" class="card__link">
+                    <article class="link__article">
+                        <div class="article__contentImg">
+                            <img class="contentImg__img contentImg__img--allImg" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                            <div class="contentImg__news">
+                                <p class="news__text">Nouveau</p>
+                            </div>
+                        </div>
+                        <div class="article__description">
+                            <div class="description__text">
+                                <h2 class="text__title">Le délice des sens</h2>
+                                <p class="text__subtitle">Folie-Méricourt</p>
+                            </div>
+                            <div class="description__icon">
+                                <input type="checkbox" class="icon__checkbox">
+                                <svg class="icon__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="svg__stroke" fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <linearGradient id="svg__Gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                        <stop offset="0" stop-color="#FF79DA"/>
+                                        <stop offset="100" stop-color="#9356DC"/>
+                                    </linearGradient>
+                                </svg>
+                            </div>
                         </div>
                     </article>
                 </a>

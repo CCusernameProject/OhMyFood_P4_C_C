@@ -175,6 +175,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 }
 .main__cardRestaurant .cardRestaurant__card .card__link {
   text-decoration: none;
@@ -190,17 +191,29 @@ body {
   overflow: hidden;
   border-radius: 15px;
 }
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg {
+  position: relative;
+}
 .main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 340px;
-  height: 231px;
-  margin-top: -60px;
+  height: 171px;
   border-radius: 15px 15px 0px 0px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__news .news__text {
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img--allImg {
+  -o-object-position: 100% 100%;
+     object-position: 100% 100%;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img--exeptedImg {
+  -o-object-position: 100% 61%;
+     object-position: 100% 61%;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__news {
   position: absolute;
   margin: 0;
-  margin-top: -160px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   color: #008766;
   width: 80px;
   height: 29px;
@@ -215,12 +228,19 @@ body {
   line-height: 16.41px;
 }
 .main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description {
+  margin-top: -5px;
+  height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  box-sizing: border-box;
   height: 100%;
   color: black;
 }
 .main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70px;
   width: 247px;
   margin: 0;
 }
@@ -237,11 +257,24 @@ body {
   line-height: 19.92px;
 }
 .main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon {
-  width: 22px;
-  height: 21px;
-  font-size: 27.5px;
-  margin-right: 15px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .fa-border {
-  border: 1px black solid;
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox {
+  margin-top: -0.5px;
+  margin-left: -0.5px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:checked + .icon__svg .svg__stroke {
+  fill: url(#svg__Gradient);
+  stroke: url(#svg__Gradient);
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__svg {
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=style.css.map */
