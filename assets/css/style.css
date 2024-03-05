@@ -279,10 +279,6 @@ body {
   height: 30px;
 }
 
-* {
-  margin: 0;
-}
-
 .footer {
   height: 170px;
   background-color: rgb(59, 59, 59);
