@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+$screenWidth-Computer: 768px;
+@media screen and (min-width: $screenWidth-Computer) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@import "./modules/variables.scss";
+@import "./modules/keyframes.scss";
+@import "./modules/header.scss";
+@import "./modules/container.scss";
+@import "./modules/footer.scss";
+@import "./modules/contentCard.scss";

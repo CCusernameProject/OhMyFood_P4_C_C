@@ -1,0 +1,61 @@
+.header {
+    width: 100%;
+    height: 113px;
+    opacity: 0;
+    display: none;
+    animation: LoaderTime 0.5s ease-in-out forwards;
+    animation-delay: 2.5s;
+    display: flex;
+    flex-direction: column;
+
+    &__titleBar {
+        z-index: 99;
+        width: 100%;
+        height: 63px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 2px 4px 0px #00000026;
+        
+        .titleBar__icon {
+            font-size: 17.2px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .titleBar__img {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            width: 197px;
+            height: 36px;
+        }
+    }
+
+    &__searchBar {
+        z-index: 98;
+        width: 100%;
+        height: 50px;
+        background-color: $graycolor;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        .seacherBar__input {
+            width: 109px;
+            background-color: $graycolor;
+            border: none;
+        }
+
+        ::placeholder {
+            font-size: 16px;
+            color: $blackcolor;
+            font-weight: 500;
+        }
+    }
+}

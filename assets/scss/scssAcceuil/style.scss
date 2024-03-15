@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@import"./modules/variables.scss";
+@import "./modules/keyframes.scss";
+@import "./modules/loader.scss";
+@import "./modules/header.scss";
+@import "./modules/container.scss";
+@import "./modules/footer.scss";

@@ -1,0 +1,58 @@
+@keyframes checkedBox {
+    0% {
+        right: -59px;
+    } 10% {
+        right: -53.1px;
+    } 20% {
+        right: -47.2px;
+    } 30% {
+        right: -41.3px;
+    } 40% {
+        right: -35.4px;
+    } 50% {
+        right: -29.5px;
+    } 60% {
+        right: -23.6px;
+    } 70% {
+        right: -17.7px;
+    } 80% {
+        right: -11.8px;
+    } 90% {
+        right: -5.9px;
+    } 100% {
+        right: 0;
+    }
+}
+
+@keyframes UncheckedBox {
+    0% {
+        right: 0;
+    } 10% {
+        right: -5.9px;
+    } 20% {
+        right: -11.8px;
+    } 30% {
+        right: -17.7px;
+    } 40% {
+        right: -23.6px;
+    } 50% {
+        right: -29.5px;
+    } 60% {
+        right: -35.4px;
+    } 70% {
+        right: -41.3px;
+    } 80% {
+        right: -47.2px;
+    } 90% {
+        right: -53.1px;
+    } 100% {
+        right: -59px;
+    }
+}
+
+@keyframes animationMenu {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}

@@ -1,0 +1,36 @@
+.main__section {
+
+    .section__article {
+
+        &--input {
+
+            &:checked + .section__article--description .description__subtitle {
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 228px;
+            }
+
+            &:checked + .section__article--description .description__title {
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 60%;
+
+            }
+
+            @media screen and (min-width: $screenWidth-Computer) {
+                &:checked + .section__article--description .description__subtitle {
+                    width: 100%;
+                    max-width: 500px;
+                }
+                &:checked + .section__article--description .description__title {
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}

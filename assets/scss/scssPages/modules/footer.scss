@@ -1,0 +1,100 @@
+.footer {
+    height: 185px;
+    background-color: $darkgray;
+    box-sizing: border-box;
+    flex-direction: column;
+    @media screen and (min-width: $screenWidth-Computer) {
+        width: 100%;
+        max-width: 2560px;
+        height: 113.5px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        float: right;
+        bottom: 0;
+        box-sizing: border-box;
+    }
+    
+    &__img {
+        margin-top: 30px;
+        margin-left: 15px;
+        min-width: 137.58px;
+        max-width: 137.58px;
+        min-height: 19px;
+        max-height: 19px;
+        @media screen and (min-width: $screenWidth-Computer) {
+            margin-top: 0;
+            margin-left: 0;
+            margin-bottom: 30px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        @media screen and (min-width: $screenWidth-Computer) and (max-width: $screenWidth-Computer2) {
+            margin-top: 0;
+            margin-left: 0;
+            margin-bottom: 30px;
+            padding-left: 3.33%;
+            padding-right: 3.33%;
+        }
+    }
+
+    &__img > path {
+        fill: white;
+    }
+
+    &__article {
+        margin-top: 15px;
+        margin-left: 30px;
+        @media screen and (min-width: $screenWidth-Computer) {
+            margin-top: 0;
+            margin-left: 0;
+            margin-bottom: 30px;
+            gap: 30px;
+            display: flex;
+            flex-direction: row;
+            height: 19px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+            justify-content: space-evenly;
+        }
+        
+        &__div {
+            @media screen and (min-width: $screenWidth-Computer) {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+            }
+
+            .div__link {
+                margin: 0;
+                margin-top: 6.5px;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                font-size: 16px;
+                line-height: 18.75px;
+                gap: 15px;
+                @media screen and (min-width: $screenWidth-Computer) {
+                    height: 19px;
+                    margin-top: 0;
+                    white-space: nowrap;
+                    font-size: clamp(12px, 100%, 16px);
+                }
+                @media screen and (min-width: $screenWidth-Computer) and (max-width: $screenWidth-Computer2) {
+                    font-size: clamp(12px, 66.6%, 16px);
+                }
+                
+                .link__icon {
+                    width: 11px;
+                    height: 13px;
+                }
+                
+                .link__text {
+                    margin: 0;
+                    line-height: 18.75px;
+                }
+            }
+        }
+    }
+}
