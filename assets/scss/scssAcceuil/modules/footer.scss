@@ -3,6 +3,7 @@
     display: none;
     animation: LoaderTime 0.5s ease-in-out forwards;
     animation-delay: 2.5s;
+    display: flex;
     height: 185px;
     background-color: $darkgray;
     box-sizing: border-box;

@@ -86,6 +86,66 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes HeartAnimation {
+  0% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: white;
+    stroke: black;
+  }
+  25% {
+    fill-opacity: 0.25;
+    stroke-opacity: 0.25;
+  }
+  50% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: url(#svg__Gradient);
+    stroke: url(#svg__Gradient);
+  }
+  75% {
+    fill-opacity: 0.75;
+    stroke-opacity: 0.75;
+    fill: url(#svg__Gradient);
+    stroke: url(#svg__Gradient);
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    fill: url(#svg__Gradient);
+    stroke: url(#svg__Gradient);
+  }
+}
+@keyframes HeartAnimation2 {
+  0% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    fill: url(#svg__Gradient);
+    stroke: url(#svg__Gradient);
+  }
+  25% {
+    fill-opacity: 0.75;
+    stroke-opacity: 0.75;
+    fill: url(#svg__Gradient);
+    stroke: url(#svg__Gradient);
+  }
+  50% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: url(#svg__Gradient);
+    stroke: url(#svg__Gradient);
+  }
+  75% {
+    fill-opacity: 0.25;
+    stroke-opacity: 0.25;
+  }
+  100% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: white;
+    stroke: black;
+  }
+}
 .header {
   width: 100%;
   display: flex;
@@ -199,18 +259,28 @@ body {
   height: 25px;
   opacity: 0;
 }
-.main__div--icon .icon__checkbox:checked + .icon__svg .svg__stroke {
+.main__div--icon .icon__checkbox:hover + .icon__svg .svg__stroke {
+  animation: HeartAnimation 0.3s ease-in-out forwards;
+}
+.main__div--icon .icon__checkbox:checked:hover + .icon__svg .svg__stroke {
+  animation: none;
   fill: url(#svg__Gradient);
   stroke: url(#svg__Gradient);
 }
-.main__div--icon .icon__checkbox:hover + .icon__svg .svg__stroke {
-  cursor: pointer;
+.main__div--icon .icon__checkbox:checked:not(:hover) + .icon__svg .svg__stroke {
   fill: url(#svg__Gradient);
   stroke: url(#svg__Gradient);
+}
+.main__div--icon .icon__checkbox:not(:hover):not(:checked) + .icon__svg .svg__stroke {
+  animation: HeartAnimation2 0.3s ease-in-out forwards;
 }
 .main__div--icon .icon__svg {
   width: 30px;
   height: 30px;
+}
+.main__div--icon .icon__svg .svg__stroke {
+  fill: white;
+  stroke: black;
 }
 .main__margin {
   margin-top: 10px;
@@ -315,16 +385,26 @@ body {
 .main__section .section__article--description .description__title {
   margin: 0;
   margin-left: 20px;
-  font-size: clamp(15px, 70%, 17px);
+  font-size: 13px;
+}
+@media screen and (width >= 375px) {
+  .main__section .section__article--description .description__title {
+    font-size: clamp(15px, 70%, 17px);
+  }
 }
 .main__section .section__article--description .description__subtitle {
   margin: 0;
   white-space: nowrap;
   margin-top: 2.5px;
   margin-left: 20px;
-  font-size: clamp(13px, 70%, 15px);
+  font-size: 11px;
   font-weight: 300;
   line-height: 17.63px;
+}
+@media screen and (width >= 375px) {
+  .main__section .section__article--description .description__subtitle {
+    font-size: clamp(13px, 70%, 15px);
+  }
 }
 .main__section .section__article--description .description__checked {
   position: absolute;
@@ -491,7 +571,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 228px;
+  width: 60%;
 }
 .main__section .section__article--input:checked + .section__article--description .description__title {
   display: inline-block;

@@ -42,20 +42,35 @@
                 width: 25px;
                 height: 25px;
                 opacity: 0;
-                &:checked + .icon__svg .svg__stroke {
+                // Au survol
+                &:hover + .icon__svg .svg__stroke {
+                    animation: HeartAnimation .3s ease-in-out forwards;
+                }
+                // Au survol mais coché
+                &:checked:hover + .icon__svg .svg__stroke {
+                    animation: none;
                     fill: url(#svg__Gradient);
                     stroke: url(#svg__Gradient);
                 }
-                &:hover + .icon__svg .svg__stroke {
-                    cursor: pointer;
+                // Si c'est coché et qu'on ne survole pas
+                &:checked:not(:hover) + .icon__svg .svg__stroke {
                     fill: url(#svg__Gradient);
                     stroke: url(#svg__Gradient);
+                }
+                // Si ce n'est pas survolé et pas coché
+                &:not(:hover):not(:checked) + .icon__svg .svg__stroke {
+                    animation: HeartAnimation2 .3s ease-in-out forwards;
                 }
             }
             
             .icon__svg {
                 width: 30px;
                 height: 30px;
+
+                .svg__stroke {
+                    fill: white;
+                    stroke: black;
+                }
             }
 
         }
@@ -169,7 +184,10 @@
                 .description__title {
                     margin: 0;
                     margin-left: 20px;
-                    font-size: clamp(15px, 70%, 17px);
+                    font-size: 13px;
+                    @media screen and (width >= 375px) {
+                        font-size: clamp(15px, 70%, 17px);
+                    }
                 }
 
                 .description__subtitle {
@@ -177,9 +195,12 @@
                     white-space: nowrap;
                     margin-top: 2.5px;
                     margin-left: 20px;
-                    font-size: clamp(13px, 70%, 15px);
+                    font-size: 11px;
                     font-weight: 300;
                     line-height: 17.63px;
+                    @media screen and (width >= 375px) {
+                        font-size: clamp(13px, 70%, 15px);
+                    }
                 }
                 
 

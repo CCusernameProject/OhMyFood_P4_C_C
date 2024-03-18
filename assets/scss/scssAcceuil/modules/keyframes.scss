@@ -56,3 +56,57 @@
         content: "100%";
     }
 }
+
+@keyframes HeartAnimation {
+    0% {
+        fill-opacity: 0.5;
+        stroke-opacity: 0.5;
+        fill: white;
+        stroke: black;
+    } 25% {
+        fill-opacity: 0.25;
+        stroke-opacity: 0.25;
+    } 50% {
+        fill-opacity: 0.5;
+        stroke-opacity: 0.5;
+        fill: url(#svg__Gradient2);
+        stroke: url(#svg__Gradient2);
+    } 75% {
+        fill-opacity: 0.75;
+        stroke-opacity: 0.75;
+        fill: url(#svg__Gradient2);
+        stroke: url(#svg__Gradient2);
+    } 100% {
+        fill-opacity: 1;
+        stroke-opacity: 1;
+        fill: url(#svg__Gradient2);
+        stroke: url(#svg__Gradient2);
+    }
+}
+
+@keyframes HeartAnimation2 {
+    0% {
+        fill-opacity: 1;
+        stroke-opacity: 1;
+        fill: url(#svg__Gradient2);
+        stroke: url(#svg__Gradient2);
+    } 25% {
+        fill-opacity: 0.75;
+        stroke-opacity: 0.75;
+        fill: url(#svg__Gradient2);
+        stroke: url(#svg__Gradient2);
+    } 50% {
+        fill-opacity: 0.5;
+        stroke-opacity: 0.5;
+        fill: url(#svg__Gradient2);
+        stroke: url(#svg__Gradient2);
+    } 75% {
+        fill-opacity: 0.25;
+        stroke-opacity: 0.25;
+    } 100% {
+        fill-opacity: 0.5;
+        stroke-opacity: 0.5;
+        fill: white;
+        stroke: black;
+    }
+}

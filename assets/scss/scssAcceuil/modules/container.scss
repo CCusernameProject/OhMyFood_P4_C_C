@@ -328,20 +328,37 @@
                                 width: 25px;
                                 height: 25px;
                                 opacity: 0;
-                                &:checked + .icon__svg .svg__stroke {
-                                    fill: url(#svg__Gradient2);
-                                    stroke: url(#svg__Gradient2);
-                                }
+
+                                // Au survol
                                 &:hover + .icon__svg .svg__stroke {
+                                    animation: HeartAnimation .3s ease-in-out forwards;
+                                }
+                                // Au survol mais coché
+                                &:checked:hover + .icon__svg .svg__stroke {
+                                    animation: none;
                                     fill: url(#svg__Gradient2);
                                     stroke: url(#svg__Gradient2);
                                 }
-    
+                                // Si c'est coché et qu'on ne survole pas
+                                &:checked:not(:hover) + .icon__svg .svg__stroke {
+                                    fill: url(#svg__Gradient2);
+                                    stroke: url(#svg__Gradient2);
+                                }
+                                // Si ce n'est pas survolé et pas coché
+                                &:not(:hover):not(:checked) + .icon__svg .svg__stroke {
+                                    animation: HeartAnimation2 .3s ease-in-out forwards;
+                                }
+                                
                             }
                             
                             .icon__svg {
                                 width: 30px;
                                 height: 30px;
+
+                                .svg__stroke {
+                                    fill: white;
+                                    stroke: black;
+                                }
                             }
                         }
                     }

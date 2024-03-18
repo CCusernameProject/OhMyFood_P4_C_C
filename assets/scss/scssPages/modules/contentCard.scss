@@ -9,7 +9,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-width: 228px;
+                width: 60%;
             }
 
             &:checked + .section__article--description .description__title {

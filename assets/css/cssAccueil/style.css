@@ -72,6 +72,66 @@ body {
     content: "100%";
   }
 }
+@keyframes HeartAnimation {
+  0% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: white;
+    stroke: black;
+  }
+  25% {
+    fill-opacity: 0.25;
+    stroke-opacity: 0.25;
+  }
+  50% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: url(#svg__Gradient2);
+    stroke: url(#svg__Gradient2);
+  }
+  75% {
+    fill-opacity: 0.75;
+    stroke-opacity: 0.75;
+    fill: url(#svg__Gradient2);
+    stroke: url(#svg__Gradient2);
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    fill: url(#svg__Gradient2);
+    stroke: url(#svg__Gradient2);
+  }
+}
+@keyframes HeartAnimation2 {
+  0% {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    fill: url(#svg__Gradient2);
+    stroke: url(#svg__Gradient2);
+  }
+  25% {
+    fill-opacity: 0.75;
+    stroke-opacity: 0.75;
+    fill: url(#svg__Gradient2);
+    stroke: url(#svg__Gradient2);
+  }
+  50% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: url(#svg__Gradient2);
+    stroke: url(#svg__Gradient2);
+  }
+  75% {
+    fill-opacity: 0.25;
+    stroke-opacity: 0.25;
+  }
+  100% {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    fill: white;
+    stroke: black;
+  }
+}
 .div {
   position: absolute;
   width: 100%;
@@ -580,17 +640,28 @@ body {
   height: 25px;
   opacity: 0;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:checked + .icon__svg .svg__stroke {
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:hover + .icon__svg .svg__stroke {
+  animation: HeartAnimation 0.3s ease-in-out forwards;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:checked:hover + .icon__svg .svg__stroke {
+  animation: none;
   fill: url(#svg__Gradient2);
   stroke: url(#svg__Gradient2);
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:hover + .icon__svg .svg__stroke {
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:checked:not(:hover) + .icon__svg .svg__stroke {
   fill: url(#svg__Gradient2);
   stroke: url(#svg__Gradient2);
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:not(:hover):not(:checked) + .icon__svg .svg__stroke {
+  animation: HeartAnimation2 0.3s ease-in-out forwards;
 }
 .main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__svg {
   width: 30px;
   height: 30px;
+}
+.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__svg .svg__stroke {
+  fill: white;
+  stroke: black;
 }
 
 .footer {
@@ -598,6 +669,7 @@ body {
   display: none;
   animation: LoaderTime 0.5s ease-in-out forwards;
   animation-delay: 2.5s;
+  display: flex;
   height: 185px;
   background-color: #353535;
   box-sizing: border-box;
