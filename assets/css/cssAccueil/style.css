@@ -520,6 +520,26 @@ body {
 .main__cardRestaurant .cardRestaurant__card--CardBox {
   position: relative;
 }
+@media screen and (width >= 768px) {
+  .main__cardRestaurant .cardRestaurant__card--CardBox--order1 {
+    order: 1;
+  }
+}
+@media screen and (width >= 768px) {
+  .main__cardRestaurant .cardRestaurant__card--CardBox--order2 {
+    order: 3;
+  }
+}
+@media screen and (width >= 768px) {
+  .main__cardRestaurant .cardRestaurant__card--CardBox--order3 {
+    order: 2;
+  }
+}
+@media screen and (width >= 768px) {
+  .main__cardRestaurant .cardRestaurant__card--CardBox--order4 {
+    order: 4;
+  }
+}
 .main__cardRestaurant .cardRestaurant__card--CardBox .icon__checkbox {
   position: absolute;
   right: 15px;
@@ -554,26 +574,6 @@ body {
   .main__cardRestaurant .cardRestaurant__card--CardBox .card__link {
     width: auto;
     max-width: 490px;
-  }
-}
-@media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order1 {
-    order: 1;
-  }
-}
-@media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order2 {
-    order: 3;
-  }
-}
-@media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order3 {
-    order: 2;
-  }
-}
-@media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order4 {
-    order: 4;
   }
 }
 .main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article {

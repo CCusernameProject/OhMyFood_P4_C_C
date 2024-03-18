@@ -206,6 +206,27 @@
             &--CardBox {
                 position: relative;
 
+                &--order1 {
+                    @media screen and (width >= $screenWidth-Computer) {
+                        order: 1;
+                    }
+                }
+                &--order2 {
+                    @media screen and (width >= $screenWidth-Computer) {
+                        order: 3;
+                    }
+                }
+                &--order3 {
+                    @media screen and (width >= $screenWidth-Computer) {
+                        order: 2;
+                    }
+                }
+                &--order4 {
+                    @media screen and (width >= $screenWidth-Computer) {
+                        order: 4;
+                    }
+                }
+
                 .icon__checkbox {
                     position: absolute;
                     right: 15px;
@@ -245,27 +266,6 @@
                     @media screen and (width >= $screenWidth-Computer) {
                         width: auto;
                         max-width: 490px;
-                    }
-    
-                    &--order1 {
-                        @media screen and (width >= $screenWidth-Computer) {
-                            order: 1;
-                        }
-                    }
-                    &--order2 {
-                        @media screen and (width >= $screenWidth-Computer) {
-                            order: 3;
-                        }
-                    }
-                    &--order3 {
-                        @media screen and (width >= $screenWidth-Computer) {
-                            order: 2;
-                        }
-                    }
-                    &--order4 {
-                        @media screen and (width >= $screenWidth-Computer) {
-                            order: 4;
-                        }
                     }
         
                     .link__article {
