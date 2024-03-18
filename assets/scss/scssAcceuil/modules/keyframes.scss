@@ -15,7 +15,6 @@
 @keyframes svgLoader {
     0% {
         fill: black;
-        scale: 1;
     } 25% {
         fill: url(#svg__Gradient);
         opacity: 0.5;
@@ -27,7 +26,6 @@
         opacity: 0.5;
     } 100% {
         fill: black;
-        scale: 1;
     }
 }
 

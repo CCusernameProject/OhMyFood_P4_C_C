@@ -18,7 +18,6 @@ body {
 @keyframes svgLoader {
   0% {
     fill: black;
-    scale: 1;
   }
   25% {
     fill: url(#svg__Gradient);
@@ -34,7 +33,6 @@ body {
   }
   100% {
     fill: black;
-    scale: 1;
   }
 }
 @keyframes loadCount {
@@ -143,7 +141,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-@media screen and (width >= 1440) {
+@media screen and (width >= 1440px) {
   .div {
     height: 953px;
   }
@@ -219,7 +217,6 @@ body {
   padding: 20px;
   border: 10px #ffb2e9 solid;
   border-radius: 25px;
-  border-radius: round;
 }
 @media screen and (width >= 768px) {
   .div__loader--child .child__text:before {
@@ -520,37 +517,66 @@ body {
     align-items: normal;
   }
 }
-.main__cardRestaurant .cardRestaurant__card .card__link {
+.main__cardRestaurant .cardRestaurant__card--CardBox {
+  position: relative;
+}
+.main__cardRestaurant .cardRestaurant__card--CardBox .icon__checkbox {
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+.main__cardRestaurant .cardRestaurant__card--CardBox .icon__checkbox:hover + .card__link .link__article .article__description .icon__svg .svg__stroke {
+  animation: HeartAnimation 0.3s ease-in-out forwards;
+  cursor: pointer;
+}
+.main__cardRestaurant .cardRestaurant__card--CardBox .icon__checkbox:checked:hover + .card__link .link__article .article__description .icon__svg .svg__stroke {
+  animation: none;
+  fill: url(#svg__Gradient2);
+  stroke: url(#svg__Gradient2);
+  cursor: pointer;
+}
+.main__cardRestaurant .cardRestaurant__card--CardBox .icon__checkbox:checked:not(:hover) + .card__link .link__article .article__description .icon__svg .svg__stroke {
+  fill: url(#svg__Gradient2);
+  stroke: url(#svg__Gradient2);
+}
+.main__cardRestaurant .cardRestaurant__card--CardBox .icon__checkbox:not(:hover):not(:checked) + .card__link .link__article .article__description .icon__svg .svg__stroke {
+  animation: HeartAnimation2 0.3s ease-in-out forwards;
+  cursor: pointer;
+}
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link {
   text-decoration: none;
   width: calc(100% - 30px);
 }
 @media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card .card__link {
+  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link {
     width: auto;
     max-width: 490px;
   }
 }
 @media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card .card__link--order1 {
+  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order1 {
     order: 1;
   }
 }
 @media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card .card__link--order2 {
+  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order2 {
     order: 3;
   }
 }
 @media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card .card__link--order3 {
+  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order3 {
     order: 2;
   }
 }
 @media screen and (width >= 768px) {
-  .main__cardRestaurant .cardRestaurant__card .card__link--order4 {
+  .main__cardRestaurant .cardRestaurant__card--CardBox .card__link--order4 {
     order: 4;
   }
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article {
   height: 251px;
   background-color: white;
   box-sizing: border-box;
@@ -560,25 +586,25 @@ body {
   overflow: hidden;
   border-radius: 15px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__contentImg {
   position: relative;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__contentImg .contentImg__img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 171px;
   border-radius: 15px 15px 0px 0px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img--allImg {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__contentImg .contentImg__img--allImg {
   -o-object-position: 100% 100%;
      object-position: 100% 100%;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__img--exeptedImg {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__contentImg .contentImg__img--exeptedImg {
   -o-object-position: 100% 61%;
      object-position: 100% 61%;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__contentImg .contentImg__news {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__contentImg .contentImg__news {
   position: absolute;
   margin: 0;
   top: 15px;
@@ -596,7 +622,7 @@ body {
   font-weight: 500;
   line-height: 16.41px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description {
   margin-top: -5px;
   height: 70px;
   display: flex;
@@ -605,7 +631,7 @@ body {
   height: 100%;
   color: black;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description .description__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -613,53 +639,30 @@ body {
   width: 247px;
   margin-left: 15px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text .text__title {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description .description__text .text__title {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.09px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__text .text__subtitle {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description .description__text .text__subtitle {
   margin: 0;
   font-size: 17px;
   font-weight: 300;
   line-height: 19.92px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description .description__icon {
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 15px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox {
-  margin-top: -0.5px;
-  margin-left: -0.5px;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-}
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:hover + .icon__svg .svg__stroke {
-  animation: HeartAnimation 0.3s ease-in-out forwards;
-}
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:checked:hover + .icon__svg .svg__stroke {
-  animation: none;
-  fill: url(#svg__Gradient2);
-  stroke: url(#svg__Gradient2);
-}
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:checked:not(:hover) + .icon__svg .svg__stroke {
-  fill: url(#svg__Gradient2);
-  stroke: url(#svg__Gradient2);
-}
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__checkbox:not(:hover):not(:checked) + .icon__svg .svg__stroke {
-  animation: HeartAnimation2 0.3s ease-in-out forwards;
-}
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__svg {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description .description__icon .icon__svg {
   width: 30px;
   height: 30px;
 }
-.main__cardRestaurant .cardRestaurant__card .card__link .link__article .article__description .description__icon .icon__svg .svg__stroke {
+.main__cardRestaurant .cardRestaurant__card--CardBox .card__link .link__article .article__description .description__icon .icon__svg .svg__stroke {
   fill: white;
   stroke: black;
 }

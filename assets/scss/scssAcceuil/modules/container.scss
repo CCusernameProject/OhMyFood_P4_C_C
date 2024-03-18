@@ -202,162 +202,169 @@
                 gap: 50px;
                 align-items: normal;
             }
-    
-            .card__link {
-                text-decoration: none;
-                width: calc(100% - 30px);
-                @media screen and (width >= $screenWidth-Computer) {
-                    width: auto;
-                    max-width: 490px;
+
+            &--CardBox {
+                position: relative;
+
+                .icon__checkbox {
+                    position: absolute;
+                    right: 15px;
+                    bottom: 30px;
+                    width: 24px;
+                    height: 24px;
+                    opacity: 0;
+
+                    // Au survol
+                    &:hover + .card__link .link__article .article__description .icon__svg .svg__stroke {
+                        animation: HeartAnimation .3s ease-in-out forwards;
+                        cursor: pointer;
+                    }
+                    // Au survol mais coché
+                    &:checked:hover + .card__link .link__article .article__description .icon__svg .svg__stroke {
+                        animation: none;
+                        fill: url(#svg__Gradient2);
+                        stroke: url(#svg__Gradient2);
+                        cursor: pointer;
+                    }
+                    // Si c'est coché et qu'on ne survole pas
+                    &:checked:not(:hover) + .card__link .link__article .article__description .icon__svg .svg__stroke {
+                        fill: url(#svg__Gradient2);
+                        stroke: url(#svg__Gradient2);
+                    }
+                    // Si ce n'est pas survolé et pas coché
+                    &:not(:hover):not(:checked) + .card__link .link__article .article__description .icon__svg .svg__stroke {
+                        animation: HeartAnimation2 .3s ease-in-out forwards;
+                        cursor: pointer;
+                    }
+                    
                 }
 
-                &--order1 {
+                .card__link {
+                    text-decoration: none;
+                    width: calc(100% - 30px);
                     @media screen and (width >= $screenWidth-Computer) {
-                        order: 1;
+                        width: auto;
+                        max-width: 490px;
                     }
-                }
-                &--order2 {
-                    @media screen and (width >= $screenWidth-Computer) {
-                        order: 3;
-                    }
-                }
-                &--order3 {
-                    @media screen and (width >= $screenWidth-Computer) {
-                        order: 2;
-                    }
-                }
-                &--order4 {
-                    @media screen and (width >= $screenWidth-Computer) {
-                        order: 4;
-                    }
-                }
     
-                .link__article {
-                    height: 251px;
-                    background-color: $whitecolor;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    overflow: hidden;
-                    border-radius: 15px;
-    
-                    .article__contentImg {
-                        position: relative;
-    
-                        .contentImg__img {
-                            object-fit: cover; 
-                            width: 100%;
-                            height: 171px;
-                            border-radius: 15px 15px 0px 0px;
-    
-                            &--allImg {
-                                object-position: 100% 100%;
-                            }
-    
-                            &--exeptedImg {
-                                object-position: 100% 61%;
-                            }
-                        }
-    
-                        .contentImg__news {
-                            position: absolute;
-                            margin: 0;
-                            top: 15px;
-                            right: 15px;
-                            color: $greendarkcolor;
-                            width: 80px;
-                            height: 29px;
-                            border-radius: 2px;
-                            background-color: $greenlightcolor;
-                            box-shadow: 0px 2px 4px 0px #00000026;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 16.41px;
-                            
+                    &--order1 {
+                        @media screen and (width >= $screenWidth-Computer) {
+                            order: 1;
                         }
                     }
-    
-    
-                    .article__description {
-                        margin-top: -5px;
-                        height: 70px;
-                        display: flex;
-                        justify-content: space-between;
+                    &--order2 {
+                        @media screen and (width >= $screenWidth-Computer) {
+                            order: 3;
+                        }
+                    }
+                    &--order3 {
+                        @media screen and (width >= $screenWidth-Computer) {
+                            order: 2;
+                        }
+                    }
+                    &--order4 {
+                        @media screen and (width >= $screenWidth-Computer) {
+                            order: 4;
+                        }
+                    }
+        
+                    .link__article {
+                        height: 251px;
+                        background-color: $whitecolor;
                         box-sizing: border-box;
-                        height: 100%;
-                        color: black;
-    
-                        .description__text {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            height: 70px;
-                            width: 247px;
-                            margin-left: 15px;
-    
-                            .text__title {
-                                margin: 0;
-                                font-size: 18px;
-                                font-weight: 700;
-                                line-height: 21.09px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        overflow: hidden;
+                        border-radius: 15px;
+        
+                        .article__contentImg {
+                            position: relative;
+        
+                            .contentImg__img {
+                                object-fit: cover; 
+                                width: 100%;
+                                height: 171px;
+                                border-radius: 15px 15px 0px 0px;
+        
+                                &--allImg {
+                                    object-position: 100% 100%;
+                                }
+        
+                                &--exeptedImg {
+                                    object-position: 100% 61%;
+                                }
                             }
-    
-                            .text__subtitle {
-                                margin: 0;
-                                font-size: 17px;
-                                font-weight: 300;
-                                line-height: 19.92px;
-                            }
-                        }
-    
-                        .description__icon {
-                            height: 70px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            margin-right: 15px;
-    
-                            .icon__checkbox {
-                                margin-top: -0.5px;
-                                margin-left: -0.5px;
+        
+                            .contentImg__news {
                                 position: absolute;
-                                width: 25px;
-                                height: 25px;
-                                opacity: 0;
-
-                                // Au survol
-                                &:hover + .icon__svg .svg__stroke {
-                                    animation: HeartAnimation .3s ease-in-out forwards;
-                                }
-                                // Au survol mais coché
-                                &:checked:hover + .icon__svg .svg__stroke {
-                                    animation: none;
-                                    fill: url(#svg__Gradient2);
-                                    stroke: url(#svg__Gradient2);
-                                }
-                                // Si c'est coché et qu'on ne survole pas
-                                &:checked:not(:hover) + .icon__svg .svg__stroke {
-                                    fill: url(#svg__Gradient2);
-                                    stroke: url(#svg__Gradient2);
-                                }
-                                // Si ce n'est pas survolé et pas coché
-                                &:not(:hover):not(:checked) + .icon__svg .svg__stroke {
-                                    animation: HeartAnimation2 .3s ease-in-out forwards;
-                                }
+                                margin: 0;
+                                top: 15px;
+                                right: 15px;
+                                color: $greendarkcolor;
+                                width: 80px;
+                                height: 29px;
+                                border-radius: 2px;
+                                background-color: $greenlightcolor;
+                                box-shadow: 0px 2px 4px 0px #00000026;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 16.41px;
                                 
                             }
-                            
-                            .icon__svg {
-                                width: 30px;
-                                height: 30px;
-
-                                .svg__stroke {
-                                    fill: white;
-                                    stroke: black;
+                        }
+        
+        
+                        .article__description {
+                            margin-top: -5px;
+                            height: 70px;
+                            display: flex;
+                            justify-content: space-between;
+                            box-sizing: border-box;
+                            height: 100%;
+                            color: black;
+        
+                            .description__text {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                height: 70px;
+                                width: 247px;
+                                margin-left: 15px;
+        
+                                .text__title {
+                                    margin: 0;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    line-height: 21.09px;
+                                }
+        
+                                .text__subtitle {
+                                    margin: 0;
+                                    font-size: 17px;
+                                    font-weight: 300;
+                                    line-height: 19.92px;
+                                }
+                            }
+        
+                            .description__icon {
+                                height: 70px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: 15px;
+                                
+                                .icon__svg {
+                                    width: 30px;
+                                    height: 30px;
+    
+                                    .svg__stroke {
+                                        fill: white;
+                                        stroke: black;
+                                    }
                                 }
                             }
                         }
